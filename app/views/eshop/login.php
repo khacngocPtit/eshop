@@ -1,36 +1,38 @@
-<?php $this->view("eshop/layout/header");?>
-	
-	<section id="form"><!--form-->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4 col-sm-offset-1">
-					<div class="login-form"><!--login form-->
-						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
-							<span>
-								<input type="checkbox" class="checkbox"> 
-								Keep me signed in
-							</span>
-							<button type="submit" class="btn btn-default">Login</button>
-						</form>
-					</div><!--/login form-->
-				</div>
-				<div class="col-sm-4">
-					<div class="signup-form"><!--sign up form-->
-						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<button type="submit" class="btn btn-default">Signup</button>
-						</form>
-					</div><!--/sign up form-->
-				</div>
-			</div>
-		</div>
-	</section><!--/form-->
+<?php $this->view("eshop/layout/header", $data);?>
+
+    <div class='wrapper bg-wrapper'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8  ">
+                    <div class="login-form">
+                        <h2 class="form__name">Login</h2>
+                        <div class="content">
+                            <form action="#" method="POST" id="form-login">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="mb-3">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail"
+                                           aria-describedby="emailHelp" placeholder="Email" name="email">
+                                    <p class="form-message mt-3"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword" class="mb-3">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword"
+                                           placeholder="Password" name="password">
+                                    <p class="form-message mt-3"></p>
+                                </div>
+
+                                <a href="#" style="float:right;" class="mb-4">Forgot password ?</a>
+                                <button type="submit" class="btn btn-primary w-100" style="width:100%; margin: 15px 0px;">Log in</button>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="text-center"> Are you new to E Shop? <a href="signup" style="color: #00A0E9;"> Sign
+                            Up</a> here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 <?php $this->view("eshop/layout/footer");?>

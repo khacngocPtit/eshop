@@ -1,5 +1,5 @@
 
-<?php $this->view("eshop/layout/header");?>
+<?php $this->view("eshop/layout/header", $data);?>
 	<section id="slider"><!--slider-->
 		<div class="container">
 			<div class="row">

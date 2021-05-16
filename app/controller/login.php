@@ -1,7 +1,7 @@
 <?php
 class Login extends Controller {
     public function index() {
-        $data["page_title"] = "Login";
+        $data["title_page"] = "Login";
         $this->view('eshop/login', $data);
     }
 }
