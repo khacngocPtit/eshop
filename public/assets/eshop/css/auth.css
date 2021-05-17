@@ -1,0 +1,387 @@
+.form-login input,
+.form-signup input,
+#contact-form input,
+#form_contact_employee input,
+#form_contact_employee select {
+    height: 56px;
+    font-size: 20px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    transform: scale(1.5);
+}
+
+.form-login {
+    margin: 40px 0;
+    font-size: 18px;
+}
+
+.btn_pc {
+    display: block;
+}
+
+.btn_sp {
+    display: none;
+}
+
+.form-signup input[type="radio"],
+.form-signup input[type="checkbox"] {
+    height: 13px;
+}
+
+.form__name {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #E0E7E8;
+    padding-bottom: 10px;
+}
+
+#signup-form hr {
+    margin-top: 3rem;
+}
+
+.form__name:after {
+    content: '';
+    position: absolute;
+    width: 13%;
+    height: 4px;
+    background: #2FC795;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+}
+
+.login-form {
+    width: 100%;
+    border: 1px solid #E0E7E8;
+    border-radius: 5px;
+    padding: 40px 66px;
+    margin-top: 40px;
+    background-color: #fff;
+}
+
+.login--other {
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #9EABB0;
+    position: relative;
+    font-size: 16px;
+}
+
+.login--other::before {
+    content: '';
+    background-color: #E0E7E8;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 45%;
+}
+
+.login--other::after {
+    content: '';
+    background-color: #E0E7E8;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 45%;
+}
+
+.logo__custom {
+    width: 176px;
+    height: 176px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid #00A0E9;
+}
+
+.thumbnail__custom {
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.38);
+}
+
+.login__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.form-signup {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #E0E7E8;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: initial;
+    background-color: #fff;
+}
+
+.contact_wrapper {
+    background: url('../images/map.png') no-repeat;
+}
+
+.form-contact {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #E0E7E8;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.form-signup a {
+    color: #00A0E9;
+}
+
+/* Contact Emplyee */
+
+.contact_emplyee_form {
+    transition: 0.3s all ease-in;
+}
+
+.contact-form-ct {
+    border: 1px solid #E0E7E8;
+    border-radius: 5px;
+    padding: 40px 30px;
+}
+
+#form_contact_employee hr {
+    margin: 2rem 0;
+}
+
+#form_contact_employee .radio-inline {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.form_textarea {
+    width: 100%;
+    height: 270px !important;
+    font-size: 20px;
+}
+
+#form_contact_employee .radio-inline input {
+    margin-right: 1rem;
+}
+
+.save_image {
+    padding: 15px 30px;
+    font-size: 19px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #9EABB0;
+    border: 1px solid #9CA9AE;
+    color: #FFFFFF;
+}
+
+.show_decs,
+.hide_decs,
+.add-job-details,
+.sp-add-job-details {
+    display: inline-flex;
+    background-color: #FFFFFF;
+    color: #00A0E9;
+    font-size: 20px;
+}
+
+.icon_show_hide,
+.add-job-details span,
+.sp-add-job-details span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+    background: #00A0E9;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.show_icon {
+    background-color: #ffffff;
+    color: #00A0E9;
+}
+
+.show_decs {
+    display: none;
+}
+
+.btn_code {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #9CA9AE;
+    background-color: #F2F2F2;
+}
+
+.job_detail {
+    display: none;
+}
+
+
+/* Responsive Form */
+
+@media screen and (min-width: 1192px) {
+    .login-form input,
+    .form-signup input,
+    #contact-form input,
+    #form_contact_employee input,
+    #form_contact_employee select {
+        height: 45px;
+        font-size: 18px;
+    }
+    .btn_custom {
+        padding: 10px 40px;
+    }
+    #form_contact_employee textarea {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .login-form input {
+        height: 56px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:1191px) {
+    .login-form input,
+    .form-signup input,
+    #contact-form input,
+    #form_contact_employee input,
+    #form_contact_employee select {
+        height: 45px;
+        font-size: 18px;
+    }
+    .form_textarea {
+        height: 200px !important;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .login-form input,
+    .form-signup input,
+    #contact-form input,
+    #form_contact_employee input,
+    #form_contact_employee select {
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        font-size: 16px;
+    }
+    .btn_custom {
+        width: 100%;
+    }
+    .login-form input,
+    .form-signup input,
+    #contact-form input,
+    #form_contact_employee input,
+    #form_contact_employee select {
+        font-size: 14px;
+    }
+    .form_textarea {
+        height: 200px !important;
+    }
+    #form_contact_employee textarea {
+        font-size: 14px;
+    }
+    .show_decs,
+    .hide_decs,
+    .add-job-details {
+        font-size: 16px;
+    }
+    .add-job-details {
+        display: none;
+    }
+    .contact-form-ct {
+        border: none;
+        padding: 0;
+    }
+    .wrapper_form_contact {
+        border: 1px solid #E0E7E8;
+        border-radius: 5px;
+        padding: 20px 15px;
+    }
+    #form_contact_employee hr:nth-last-child(2) {
+        margin: 2rem 0 0 0;
+    }
+    .sp_ct_btn {
+        margin-top: 1.5rem;
+    }
+    .sp-hr-none {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    body {
+        font-size: 18px;
+    }
+    .btn_pc {
+        display: none;
+    }
+    .btn_custom {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+    .btn_sp {
+        display: block;
+    }
+    .form-signup {
+        width: 100%;
+        padding: 30px;
+        border: 1px solid #E0E7E8;
+        border-radius: 5px;
+        font-size: 18px;
+        line-height: initial;
+    }
+    .login-form {
+        padding: 20px 37px;
+    }
+}
+
+@media screen and (max-width: 324px) {
+    .form__name {
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+    body {
+        font-size: 12px;
+    }
+    .btn_custom {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+    .form-signup {
+        width: 100%;
+        padding: 30px;
+        border: 1px solid #E0E7E8;
+        border-radius: 5px;
+        font-size: 14px;
+        line-height: initial;
+    }
+    .login-form {
+        padding: 20px 15px;
+    }
+    .contact-form {
+        font-size: 12px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+}
