@@ -5,7 +5,7 @@ class DataBase {
     {
         try {
             $string = "mysql:host=Localhost;dbname=quan_ly_san_pham";
-            self::$conn = new PDO($string, DB_USER, DB_PW);
+            self::$conn = new PDO($string, "root", "");
         } catch (PDOException $e) {
             die($e->getMessage());
         }
