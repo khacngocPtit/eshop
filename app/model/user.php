@@ -18,7 +18,8 @@
             $gender = $_POST['gender'];
             $password = $_POST['password'];
             $sql1 = "select * from 'tbl_user' where username=$username";
-            $user = $this->read($sql1);
+            $db = DataBase::getInstance();
+            $user = $db->read($sql1);
             if($user) {
                 die("User is existed.");
             }
