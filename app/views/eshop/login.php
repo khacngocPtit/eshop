@@ -1,9 +1,11 @@
-<?php $this->view("eshop/layout/header");?>
 
+<?php $this->view("eshop/layout/header", $data);?>
     <div class='wrapper bg-wrapper'>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
+
+                <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8  ">
+
                     <div class="login-form">
                         <h2 class="form__name">Login</h2>
                         <div class="content">
@@ -22,17 +24,17 @@
                                 </div>
 
                                 <a href="#" style="float:right;" class="mb-4">Forgot password ?</a>
-                                <button type="submit" class="btn btn-primary w-100">Log in</button>
+
+                                <button type="submit" class="btn btn-primary w-100" style="width:100%; margin: 15px 0px;">Log in</button>
                             </form>
                         </div>
                     </div>
-                    <p class="text-center"> Are you new to E Shop? <a href="signup" style="color: #00A0E9;"> Sign Up</a> here</p>
+                    <p class="text-center"> Are you new to E Shop? <a href="signup" style="color: #00A0E9;"> Sign
+                            Up</a> here</p>
+
                 </div>
             </div>
         </div>
     </div>
-
-
-
 
 <?php $this->view("eshop/layout/footer");?>

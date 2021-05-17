@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Home | E-Shopper</title>
+        <title><?= $data["title_page"];?>   | E-Shopper</title>
         <link href="<?= ASSETS; ?>eshop/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?= ASSETS; ?>eshop/css/font-awesome.min.css" rel="stylesheet">
         <link href="<?= ASSETS; ?>eshop/css/prettyPhoto.css" rel="stylesheet">
         <link href="<?= ASSETS; ?>eshop/css/price-range.css" rel="stylesheet">
         <link href="<?= ASSETS; ?>eshop/css/animate.css" rel="stylesheet">
         <link href="<?= ASSETS; ?>eshop/css/main.css" rel="stylesheet">
+        <link href="<?= ASSETS; ?>eshop/css/auth.css" rel="stylesheet">
         <link href="<?= ASSETS; ?>eshop/css/responsive.css" rel="stylesheet">
         <!--[if lt IE 9]>
         <script src="<?= ASSETS; ?>eshop/js/html5shiv.js"></script>

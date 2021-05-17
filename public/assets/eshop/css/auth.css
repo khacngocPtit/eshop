@@ -124,9 +124,6 @@ input[type="radio"] {
     background-color: #fff;
 }
 
-.contact_wrapper {
-    background: url('../images/map.png') no-repeat;
-}
 
 .form-contact {
     background-color: #FFFFFF;
@@ -359,13 +356,16 @@ input[type="radio"] {
         font-size: 20px;
         text-transform: capitalize;
     }
+
     body {
         font-size: 12px;
     }
+
     .btn_custom {
         font-size: 14px;
         padding: 15px 10px;
     }
+
     .form-signup {
         width: 100%;
         padding: 30px;
@@ -374,14 +374,20 @@ input[type="radio"] {
         font-size: 14px;
         line-height: initial;
     }
+
     .login-form {
         padding: 20px 15px;
     }
+
     .contact-form {
         font-size: 12px;
     }
+
     .contact-form input,
     .contact-form textarea {
         font-size: 14px;
     }
+}
+.form-horizontal .control-label {
+    text-align: left;
 }

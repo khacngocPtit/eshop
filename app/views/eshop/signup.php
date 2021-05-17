@@ -1,26 +1,26 @@
-<?php $this->view("eshop/layout/header");?>
+
+<?php $this->view("eshop/layout/header", $data);?>
 
     <div class='wrapper bg-wrapper'>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-signup mt-5">
-                        <form class="form-horizontal" role="form" id="signup-form" action="#" method="POST">
+                        <form class="form-horizontal" role="form" id="signup-form" method="post">
                             <h2 class="form__name">Sign up</h2>
                             <div class="row">
-                                <div class="col-lg-8 col-xl-6 offset-xl-3 offset-lg-2">
+                                <div class="col-lg-8 col-xl-6 col-xl-offset-3 col-lg-offset-2">
                                     <div class="form-group mb-4 row">
-                                        <label for="firstName" class="col-md-3 control-label  d-flex">First
-                                            Name</label>
+                                        <label for="firstName" class="col-md-3 control-label  d-flex">Username</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="firstName" name="firstname" placeholder="First Name" class="form-control" autofocus>
+                                            <input type="text" id="username" name="username" placeholder="User Name" class="form-control" autofocus>
                                         </div>
                                     </div>
                                     <div class="form-group  mb-4  row">
-                                        <label for="lastName" class="col-md-3 control-label  d-flex">Last
+                                        <label for="lastName" class="col-md-3 control-label  d-flex">Full
                                             Name</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="lastName" name="lastname" placeholder="Last Name" class="form-control" autofocus>
+                                            <input type="text" id="lastName" name="fullname" placeholder="Full Name" class="form-control" autofocus>
                                         </div>
                                     </div>
                                     <div class="form-group  mb-4 row">
@@ -72,12 +72,6 @@
                                         </div>
                                     </div>
                                     <div class="form-group  mb-4 row">
-                                        <label for="password" class="col-md-3 control-label  d-flex ">Nationality</label>
-                                        <div class="col-md-9">
-                                            <input type="text" id="nationality" name="nationality" placeholder="Nationality" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group  mb-4 row">
                                         <label for="password" class="col-md-3 control-label  d-flex ">Password</label>
                                         <div class="col-md-9">
                                             <input type="password" id="password" name="password" placeholder="Password" class="form-control">
@@ -104,13 +98,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn_pink btn_custom w-100 btn_pc">Complete Sign
+
+                                    <button type="submit" class="btn btn-primary" style="width:100%; margin:15px 0px;">Complete Sign
                                         up</button>
-                                    <button type="submit" class="btn_pink btn_custom w-100 btn_sp">Complete
-                                        Registration</button>
                                 </div>
                             </div>
-                            <p class="text-center mt-4">Already Registered? <a href="login.html">Log in</a> here</p>
+                            <p class="text-center mt-4">Already Registered? <a href="login">Log in</a> here</p>
                         </form>
                         <!-- /form -->
                     </div>
@@ -118,7 +111,5 @@
             </div>
         </div>
     </div>
-
-
 
 <?php $this->view("eshop/layout/footer");?>
