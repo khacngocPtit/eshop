@@ -8,7 +8,6 @@ class Signup extends  Controller
         if($_SERVER["REQUEST_METHOD"] == 'POST') {
             $userModel = $this->load_model("User");
             $userModel->signUp($_POST);
-
         }
         $this->view("eshop/signup", $data);
     }
