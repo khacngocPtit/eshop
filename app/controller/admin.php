@@ -2,7 +2,13 @@
 class Admin extends Controller
 {
     public function index() {
-        $data["title_page"] = "Admin";
-        $this->view('eshop/admin/index', $data);
+        if(isset($_SESSION['role']) && $_SESSION['role'] == 2) {
+            $data["title_page"] = "Admin";
+            $this->view('eshop/admin/index', $data);
+        }
+        else {
+            header("Location". ROOT . "home");
+            die;
+        }
     }
 }

@@ -51,6 +51,7 @@
             if($user) {
                 $_SESSION['id'] = $user[0]->id;
                 $_SESSION['username'] = $user[0]->username;
+                $_SESSION['role'] = $user[0]->role;
                 header("Location:". ROOT. "home");
                 die;
             } else {
