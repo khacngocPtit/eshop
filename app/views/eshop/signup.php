@@ -13,21 +13,21 @@
                                     <div class="form-group mb-4 row">
                                         <label for="firstName" class="col-md-3 control-label  d-flex">Username</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="username" name="username" placeholder="User Name" class="form-control" autofocus>
+                                            <input type="text" id="username" name="username" value="<?php isset($_POST['username']) ? $_POST['username'] : ''?>" placeholder="User Name" class="form-control" autofocus>
                                         </div>
                                     </div>
                                     <div class="form-group  mb-4  row">
                                         <label for="lastName" class="col-md-3 control-label  d-flex">Full
                                             Name</label>
                                         <div class="col-md-9">
-                                            <input type="text" id="lastName" name="fullname" placeholder="Full Name" class="form-control" autofocus>
+                                            <input type="text" id="lastName" name="fullname" value="<?php isset($_POST['fullname']) ? $_POST['fullname'] : ''?>" placeholder="Full Name" class="form-control" autofocus>
                                         </div>
                                     </div>
                                     <div class="form-group  mb-4 row">
                                         <label for="email" class="col-md-3 control-label  d-flex ">Email
                                         </label>
                                         <div class="col-md-9">
-                                            <input type="email" id="email" placeholder="Email" class="form-control" name="email">
+                                            <input type="email" id="email" value="<?php isset($_POST['email']) ? $_POST['email'] : ''?>" placeholder="Email" class="form-control" name="email">
                                         </div>
                                     </div>
                                     <div class="form-group  mb-4 row">
@@ -35,14 +35,14 @@
                                             number
                                         </label>
                                         <div class="col-md-9">
-                                            <input type="phoneNumber" name="phonenumber" id="phoneNumber" placeholder="Phone number" class="form-control">
+                                            <input type="phoneNumber" name="phonenumber" value="<?php isset($_POST['phonenumber']) ? $_POST['phonenumber'] : ''?>" id="phoneNumber" placeholder="Phone number" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group  mb-4 row">
                                         <label for="dateofbirth" class="col-md-3 control-label  d-flex ">Date of
                                             Birth</label>
                                         <div class="col-md-9">
-                                            <input type="date" id="dateofbirth" name="dateofbirth" class="form-control">
+                                            <input type="date"  value="<?php isset($_POST['dateofbirth']) ? $_POST['dateofbirth'] : ''?>" id="dateofbirth" name="dateofbirth" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group  mb-4 row">
@@ -58,7 +58,7 @@
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <label class="radio-inline">
-                                                        <input type="radio" id="maleRadio" value="Male"
+                                                        <input type="radio" id="maleRadio" value="Female"
                                                                name="gender"> Female
                                                     </label>
                                                 </div>
@@ -74,14 +74,14 @@
                                     <div class="form-group  mb-4 row">
                                         <label for="password" class="col-md-3 control-label  d-flex ">Password</label>
                                         <div class="col-md-9">
-                                            <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                                            <input type="password" value="<?php isset($_POST['password']) ? $_POST['password'] : ''?>" id="password" name="password" placeholder="Password" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group mb-4 row">
                                         <label for="password" class="col-md-3 control-label  d-flex ">Confirm
                                             Password</label>
                                         <div class="col-md-9">
-                                            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" class="form-control">
+                                            <input type="password"  value="<?php isset($_POST['confirmpassword']) ? $_POST['confirmpassword'] : ''?>" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" class="form-control">
                                         </div>
                                     </div>
                                     <hr />
@@ -98,7 +98,9 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <?php
+                                    check_error();
+                                    ?>
                                     <button type="submit" class="btn btn-primary" style="width:100%; margin:15px 0px;">Complete Sign
                                         up</button>
                                 </div>

@@ -4,6 +4,7 @@
         /**
          * User constructor.
          */
+        private $err = "";
         public function __construct()
         {
         }
@@ -17,24 +18,46 @@
             $dateOfBirth = $_POST['dateofbirth'];
             $gender = $_POST['gender'];
             $password = $_POST['password'];
+            $confirmpassword = $_POST['confirmpassword'];
 
-            $sql1 = "select * from 'tbl_user' where username=$username";
+            $sql1 = "select * from tbl_user where username='".$username."'";
             $db = DataBase::getInstance();
             $user = $db->read($sql1);
             if($user) {
-                die("User is existed.");
+                $this->err .= "User is exist. </br>";
             }
             else {
-                $sql = 'insert into tbl_user (username, fullname, email, phonenumber, dateofbirth, gender, password, role) value (username, ''fullname, :email, :phoneNumber, :dateOfBirth, :gender, :password, :role)';
-                echo $sql;
+                if($password == $confirmpassword) {
+                    $this->err .= "Password is not match. </br>";
+                }
+                $password = hash('sha1', $password);
+                $sql = "insert into tbl_user (username, fullname, email, phonenumber, date_of_birth, gender, password, role) value ('{$username}','{$fullname}', '{$email}', '{$phoneNumber}', '{$dateOfBirth}', '{$gender}', '{$password}', {$role})";
                 $result = $db->write($sql);
                 if($result) {
-                    die("Them thanh cong");
+                   header("Location:". ROOT. "login");
+                   die;
                 }
             }
+            $_SESSION['error'] = $this->err;
         }
-        public function  login() {
+        public function  login($POST) {
 
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $db = DataBase::getInstance();
+            $password = hash('sha1', $password);
+            $sql = "select * from tbl_user where username = '{$username}' and password = '{$password}' and role = 1";
+            $user = $db->read($sql);
+            if($user) {
+                $_SESSION['id'] = $user[0]->id;
+                $_SESSION['username'] = $user[0]->username;
+                header("Location:". ROOT. "home");
+                die;
+            } else {
+                $this->err .= "Username or password is wrong.";
+
+            }
+            $_SESSION['error'] = $this->err;
         }
 
         public function getUser() {
@@ -43,5 +66,25 @@
 
         public function getAllUser() {
 
+        }
+
+        public function check_login() {
+            if(isset($_SESSION['id']) && $_SESSION['username']) {
+                $sql = "select * from tbl_user where username = '{$_SESSION['username']}' and id = {$_SESSION['id']}";
+                $db = DataBase::getInstance();
+                $result = $db->read($sql);
+                if(is_array($result)) {
+                    return $result[0];
+                }
+            }
+            return false;
+        }
+        public function logout() {
+            if(isset($_SESSION['id']) && isset($_POST['username'])) {
+                unset($_SESSION['id']);
+                unset($_POST['username']);
+            }
+            header("Location". ROOT. "home");
+            die;
         }
     }
