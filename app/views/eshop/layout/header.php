@@ -34,9 +34,10 @@
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
-                                <?php if(isset($data['user_data'])) : ?>
+                                <?php
+                                if(isset($data['user_data'])): ?>
                                     <li><a href="#"><i class="fa fa-phone"></i> +<?= $data["user_data"]->phonenumber?></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i><?= $data["user_data"]->email?> </a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i> <?= $data["user_data"]->email?> </a></li>
                                 <?php else:?>
                                     <li><a href="#"><i class="fa fa-phone"></i> +012345678</a></li>
                                     <li><a href="#"><i class="fa fa-envelope"></i>info@yahoo.com </a></li>

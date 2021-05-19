@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - Bootstrap Admin Template</title>
+    <title>E Shop - <?= $data['title_page']?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= ASSETS; ?>eshop/admin/css/bootstrap.css" rel="stylesheet">
@@ -34,18 +34,21 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" action="index.html">
+		      <form class="form-login" method="post">
 		        <h2 class="form-login-heading">sign in now</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="User ID" autofocus>
+		            <input type="text" class="form-control" placeholder="User ID" name="username" autofocus>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Password">
+		            <input type="password" class="form-control" name="password" placeholder="Password">
 		            <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.php#myModal"> Forgot Password?</a>
 		
 		                </span>
 		            </label>
+                    <?php if(isset($_SESSION['error'])):?>
+                        <label class="alert alert-danger"><?= $_SESSION['error'];?></label>
+                    <?php endif;?>
 		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
 		            <hr>
 		            

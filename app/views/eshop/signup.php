@@ -51,14 +51,14 @@
                                             <div class="row">
                                                 <div class="col-sm-4">
                                                     <label class="radio-inline">
-                                                        <input type="radio" id="femaleRadio" name="gender"
-                                                               value="Female">
+                                                        <input type="radio" id="maleRadio" name="gender"
+                                                               value="Male">
                                                         Male
                                                     </label>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <label class="radio-inline">
-                                                        <input type="radio" id="maleRadio" value="Female"
+                                                        <input type="radio" id="femaleRadio" value="Female"
                                                                name="gender"> Female
                                                     </label>
                                                 </div>

@@ -46,7 +46,7 @@
             $password = $_POST['password'];
             $db = DataBase::getInstance();
             $password = hash('sha1', $password);
-            $sql = "select * from tbl_user where username = '{$username}' and password = '{$password}' and role = 1";
+            $sql = "select * from tbl_user where username = '{$username}' and password = '{$password}'";
             $user = $db->read($sql);
             if($user) {
                 $_SESSION['id'] = $user[0]->id;
@@ -61,13 +61,6 @@
             $_SESSION['error'] = $this->err;
         }
 
-        public function getUser() {
-
-        }
-
-        public function getAllUser() {
-
-        }
 
         public function check_login() {
             if(isset($_SESSION['id']) && $_SESSION['username']) {
@@ -87,5 +80,25 @@
             }
             header("Location". ROOT. "home");
             die;
+        }
+
+        public function loginAdmin($POST) {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            $db = DataBase::getInstance();
+            $password = hash("sha1", $password);
+
+            $sql = "select * from tbl_user where username = '{$username}' and password = '{$password}' and role = 2";
+            $admin = $db->read($sql);
+            print_r($admin);
+            if(is_array($admin)) {
+                header("Location".ROOT."admin");
+                die;
+            } else {
+                $this->err = "Wrong username or password.";
+
+            }
+            $_SESSION["error"] = $this->err;
         }
     }
