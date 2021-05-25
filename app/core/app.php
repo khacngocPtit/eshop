@@ -8,6 +8,7 @@ Class App {
     {
         $url = $this->parseUrl();
         if(file_exists("../app/controller/").strtolower($url[0]). ".php") {
+            
             $this->controller = strtolower($url[0]);
             unset($url[0]);
         }

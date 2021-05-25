@@ -78,7 +78,7 @@
                 unset($_SESSION['id']);
                 unset($_POST['username']);
             }
-            header("Location". ROOT. "home");
+            header("Location:". ROOT. "home");
             die;
         }
 
@@ -91,13 +91,13 @@
 
             $sql = "select * from tbl_user where username = '{$username}' and password = '{$password}' and role = 2";
             $admin = $db->read($sql);
-            print_r($admin);
-            if(is_array($admin)) {
-                header("Location".ROOT."admin");
+            if($admin) {
+                $_SESSION['role'] = $admin[0]->role;
+
+                header("Location:". ROOT. "admin");
                 die;
             } else {
                 $this->err = "Wrong username or password.";
-
             }
             $_SESSION["error"] = $this->err;
         }

@@ -7,7 +7,7 @@ class Admin extends Controller
             $this->view('eshop/admin/index', $data);
         }
         else {
-            $this->view('eshop/admin/login');
+           header("Location: ". ROOT. 'adminlogin');
         }
     }
 }
