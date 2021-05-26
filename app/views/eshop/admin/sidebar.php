@@ -25,7 +25,13 @@
             </li>
             <li class="sub-menu">
                 <a href="javascript:;">
-                    <i class=" fa fa-bar-chart-o"></i>
+                    <i class="fa fa-sliders"></i>
+                    <span>Master Slider</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-bar-chart-o"></i>
                     <span>Charts</span>
                 </a>
                 <ul class="sub">
