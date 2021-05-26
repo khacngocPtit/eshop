@@ -257,7 +257,7 @@
                           <span>Data Tables</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="basic_table.php">Basic Table</a></li>
+                          <li><a  href="product.php">Basic Table</a></li>
                           <li class="active"><a  href="responsive_table.php">Responsive Table</a></li>
                       </ul>
                   </li>

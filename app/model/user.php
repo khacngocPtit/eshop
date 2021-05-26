@@ -85,10 +85,8 @@
         public function loginAdmin($POST) {
             $username = $_POST['username'];
             $password = $_POST['password'];
-
             $db = DataBase::getInstance();
             $password = hash("sha1", $password);
-
             $sql = "select * from tbl_user where username = '{$username}' and password = '{$password}' and role = 2";
             $admin = $db->read($sql);
             if($admin) {
