@@ -13,44 +13,44 @@
                 </a>
             </li>
             <li class="sub-menu">
-                <a href="<?=ROOT?>admin/users">
+                <a href="<?=ROOT?>users">
                     <i class="fa fa-user"></i>
                     <span>Quản lý người dùng</span>
                 </a>
                 <ul class="sub">
-                    <li><a href="<?=ROOT?>admin/users/custommer">Custommer</a></li>
-                    <li><a href="<?=ROOT?>admin/users/admin">Admin</a></li>
+                    <li><a href="<?=ROOT?>users/custommer">Custommer</a></li>
+                    <li><a href="<?=ROOT?>users/admin">Admin</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="<?=ROOT?>admin/products">
+                <a href="<?=ROOT?>products">
                     <i class="fa fa-barcode"></i>
                     <span>Quản lý sản phẩm</span>
                 </a>
                 <ul class="sub">
-                    <li><a href="<?=ROOT?>admin/products/get-product">Thêm mới sản phẩm</a></li>
-                    <li><a href="<?=ROOT?>admin/products/add">Sửa sản phẩm</a></li>
-                    <li><a href="<?=ROOT?>admin/products/delete">Xóa sản phẩm</a></li>
+                    <li><a href="<?=ROOT?>products/get-product">Thêm mới sản phẩm</a></li>
+                    <li><a href="<?=ROOT?>products/add">Sửa sản phẩm</a></li>
+                    <li><a href="<?=ROOT?>products/delete">Xóa sản phẩm</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="<?=ROOT?>admin/products">
+                <a href="<?=ROOT?>products">
                     <i class="fa fa-list-alt"></i>
                     <span>Quản lý danh mục</span>
                 </a>
                 <ul class="sub">
-                    <li><a href="<?=ROOT?>admin/products/get-product">Thêm mới danh mục</a></li>
-                    <li><a href="<?=ROOT?>admin/products/add">Sửa danh mục sản </a></li>
-                    <phẩmli><a href="<?=ROOT?>admin/products/delete">Xóa danh mục sản phẩm</a></phẩmli>
+                    <li><a href="<?=ROOT?>products/get-product">Thêm mới danh mục</a></li>
+                    <li><a href="<?=ROOT?>products/add">Sửa danh mục sản </a></li>
+                    <phẩmli><a href="<?=ROOT?>products/delete">Xóa danh mục sản phẩm</a></phẩmli>
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="<?=ROOT?>admin/setting">
+                <a href="<?=ROOT?>setting">
                     <i class="fa fa-cogs"></i>
                     <span>Cài đặt</span>
                 </a>
                 <ul class="sub">
-                    <phẩmli><a href="<?=ROOT?>admin/setting">Slider sản phẩm </a></phẩmli>
+                    <phẩmli><a href="<?=ROOT?>setting">Slider sản phẩm </a></phẩmli>
                 </ul>
             </li>
         </ul>

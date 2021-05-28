@@ -47,6 +47,7 @@ CREATE TABLE `tbl_category` (
   `id` int(30) NOT NULL,
   `category_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `category_decs` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category_status` tinyint NOT NULL ,
   `created_at` time NOT NULL,
   `updated_at` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
