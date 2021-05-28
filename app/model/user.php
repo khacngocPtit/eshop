@@ -91,7 +91,8 @@
             $admin = $db->read($sql);
             if($admin) {
                 $_SESSION['role'] = $admin[0]->role;
-
+                $_SESSION['id'] = $admin[0]->id;
+                $_SESSION['username'] = $admin[0]->username;
                 header("Location:". ROOT. "admin");
                 die;
             } else {
