@@ -19,5 +19,7 @@ class Categories
 
     }
 
-    public function
+    public function productcategory() {
+
+    }
 }
