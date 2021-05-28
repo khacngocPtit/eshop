@@ -4,7 +4,7 @@ class adminlogin extends Controller {
         $data['title_page'] = "Login Admin";
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $userModel = $this->load_model("User");
-            $data["err"] = $userModel->loginAdmin($_POST);
+            $data["user-data"] = $userModel->loginAdmin($_POST);
         }
         $this->view('eshop/admin/login', $data);
 

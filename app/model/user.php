@@ -46,7 +46,7 @@
             $password = $_POST['password'];
             $db = DataBase::getInstance();
             $password = hash('sha1', $password);
-            $sql = "select * from tbl_user where username = '{$username}' and password = '{$password}'";
+            $sql = "select * from tbl_user where username = '{$username}' and password = '{$password}' and role = 1 ";
             $user = $db->read($sql);
             if($user) {
                 $_SESSION['id'] = $user[0]->id;
