@@ -68,9 +68,10 @@
                             <label class="col-lg-2 col-sm-2 control-label">Hình ảnh sản phẩm</label>
                             <div class="col-lg-10">
                                 <label for="upload-product" id="label-upload">Upload file</label>
-                                <input type="file" name="product_image" id="upload-product">
+                                <input type="file" name="product_image[]" id="upload-product" multiple>
                             </div>
                         </div>
+                        <button class="btn btn-primary" id="create-product">Thêm mới sản phẩm</button>
                     </form>
                 </div>
             </div><!-- col-lg-12-->
