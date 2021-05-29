@@ -35,7 +35,7 @@
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
                                 <?php
-                                if(isset($data['user_data'])): ?>
+                                if(isset($data['user_data']) && $data['user_data']->phonenumber != null && $data['user_data']->email != null): ?>
                                     <li><a href="#"><i class="fa fa-phone"></i> +<?= $data["user_data"]->phonenumber?></a></li>
                                     <li><a href="#"><i class="fa fa-envelope"></i> <?= $data["user_data"]->email?> </a></li>
                                 <?php else:?>

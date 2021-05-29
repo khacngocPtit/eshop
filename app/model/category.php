@@ -21,6 +21,23 @@ class Category
             return null;
         }
     }
+
+    public function getOneCategory($id) {
+        $sql = "select * from tbl_category where id = {$id}";
+        $db = DataBase::getInstance();
+        $stm = $db->prepare($sql);
+        $result = $stm->execute();
+        if($result) {
+            $data = $stm->fetchAll(PDO::FETCH_OBJ);
+            if(is_array($data)) {
+                return $data[0];
+            }
+        }
+        else {
+            return null;
+        }
+    }
+
     public function create($POST) {
         $decs = $_POST['category_decs'];
         $name = $_POST['category_name'];
@@ -41,14 +58,25 @@ class Category
         $name = $_POST['category_name'];
         $sql = "update tbl_category set category_name='{$name}', category_decs = '{$decs}' where id = {$id}";
         $db = DataBase::getInstance();
-        $result = $db->write($sql);
-        return $result;
+        $result = $db->prepare($sql);
+        $result = $result->execute();
+        if($result) {
+            header("Location:". ROOT. "categories");
+            die;
+        } else {
+            return null;
+        }
     }
 
     public function delete($id) {
         $sql = "delete from tbl_category where id = {$id}";
         $db = DataBase::getInstance();
-        $result = $db->write($sql);
-        return $result;
+       $result = $db->write($sql);
+        if($result) {
+            header("Location:". ROOT. "categories");
+            die;
+        } else {
+            return null;
+        }
     }
 }

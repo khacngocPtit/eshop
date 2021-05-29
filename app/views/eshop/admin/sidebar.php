@@ -12,16 +12,6 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-<!--            <li class="sub-menu">-->
-<!--                <a href="--><?//=ROOT?><!--users">-->
-<!--                    <i class="fa fa-user"></i>-->
-<!--                    <span>Quản lý người dùng</span>-->
-<!--                </a>-->
-<!--                <ul class="sub">-->
-<!--                    <li><a href="--><?//=ROOT?><!--users/custommer">Custommer</a></li>-->
-<!--                    <li><a href="--><?//=ROOT?><!--users/admin">Admin</a></li>-->
-<!--                </ul>-->
-<!--            </li>-->
             <li class="sub-menu">
                 <a href="<?=ROOT?>products">
                     <i class="fa fa-barcode"></i>

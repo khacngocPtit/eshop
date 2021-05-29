@@ -10,8 +10,7 @@
 </section>
 
 <!-- js placed at the end of the document so the pages load faster -->
-<script src="<?= ASSETS; ?>eshop/admin/js/jquery.js"></script>
-<script src="<?= ASSETS; ?>eshop/admin/js/jquery-1.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="<?= ASSETS; ?>eshop/admin/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="<?= ASSETS; ?>eshop/admin/js/jquery.dcjqaccordion.2.7.js">
 </script>
@@ -63,6 +62,20 @@
                 }
             ]
         });
+        // Delete Product
+        $(".delete-btn").click(function () {
+            const id = $(this).data("id");
+            $.ajax({
+                method: "post",
+                url: '<?=ROOT?>categories/delete',
+                data: {id: id},
+                success: function (data) {
+                    if(data) {
+                        window.location.href = "<?=ROOT?>categories";
+                    }
+                }
+            })
+        })
     });
 
 
