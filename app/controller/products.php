@@ -17,6 +17,23 @@ class Products extends Controller
             $data["title_page"] = "Admin Add New Product ";
             $admin = $this->load_model('User');
             $data['user-data'] =  $admin->check_login();
+            $categoryModel = $this->load_model('Category');
+            $data['categories'] = $categoryModel->getCategories();
+            if($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $productModel = $this->load_model("Product");
+                $allowedExts = array("jpeg", "jpg", "png", "gif");
+                $result = $productModel->create($_POST);
+                foreach ($_FILES["product_image"]["tmp_name"] as $key => $value) {
+                    $filename = $_FILES["product_image"]["name"][$key];
+                    $filename_tmp = $_FILES["product_image"]["tmp_name"][$key];
+                    show($filename);
+                }
+                if($result) {
+                    header("Location:".ROOT."products");
+                } else {
+                    $data["err"] = "Có lỗi xảy ra ";
+                }
+            }
             $this->view('eshop/admin/addproduct', $data);
         }
     }

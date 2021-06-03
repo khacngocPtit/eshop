@@ -17,7 +17,7 @@
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">Mô tả danh mục</label>
                                 <div class="col-sm-10">
-                                    <textarea name="category_decs" class="form-control" rows="5" placeholder="Mô tả danh mục sản phẩm" value="<?= $data['category_data']->category_decs?>"></textarea>
+                                    <textarea name="category_decs" class="form-control" rows="5" placeholder="Mô tả danh mục sản phẩm"><?= $data['category_data']->category_decs?></textarea>
                                 </div>
                             </div>
                             <button class="btn btn-primary f-right">Thêm mới</button>

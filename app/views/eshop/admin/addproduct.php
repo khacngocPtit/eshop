@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Tên sản phẩm</label>
                             <div class="col-sm-10">
-                                <input type="text" name="product_name" class="form-control" value="">
+                                <input type="text" name="product_name" class="form-control" placeholder="Tên sản phẩm">
                             </div>
                         </div>
                         <div class="form-group">
@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Số lượng</label>
                             <div class="col-sm-10">
-                                <input type="text" name="product_number" class="form-control round-form">
+                                <input type="text" name="product_number" class="form-control round-form" placeholder="Số lượng sản phẩm">
                             </div>
                         </div>
                         <div class="form-group">
@@ -56,21 +56,24 @@
                         <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Danh mục sản phẩm</label>
                             <div class="col-sm-10">
+                                <?php if(isset($data['categories']) && count($data['categories']) > 0):?>
+
                                 <select class="form-control" name="category_id" id="sel1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                    <?php foreach ($data['categories'] as $key=>$value):?>
+                                        <option value="<?=$value->id?>"><?=$value->category_name?></option>
+                                    <?php endforeach;?>
                                 </select>
+                                <?php endif;?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-2 col-sm-2 control-label">Hình ảnh sản phẩm</label>
                             <div class="col-lg-10">
                                 <label for="upload-product" id="label-upload">Upload file</label>
-                                <input type="file" name="product_image" id="upload-product">
+                                <input type="file" name="product_image[]" id="upload-product" multiple>
                             </div>
                         </div>
+                        <button class="btn btn-primary">Thêm mới sản phẩm</button>
                     </form>
                 </div>
             </div><!-- col-lg-12-->
