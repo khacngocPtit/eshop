@@ -73,7 +73,11 @@
                                 <input type="file" name="product_image[]" id="upload-product" multiple>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <button class="btn btn-primary">Thêm mới sản phẩm</button>
+=======
+                        <button class="btn btn-primary" id="create-product">Thêm mới sản phẩm</button>
+>>>>>>> bfe2c9e52cbdd6f124d8d16f01bf977037508204
                     </form>
                 </div>
             </div><!-- col-lg-12-->
