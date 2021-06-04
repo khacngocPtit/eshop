@@ -58,11 +58,13 @@
                             <div class="col-sm-10">
                                 <?php if(isset($data['categories']) && count($data['categories']) > 0):?>
 
-                                <select class="form-control" name="category_id" id="sel1">
-                                    <?php foreach ($data['categories'] as $key=>$value):?>
-                                        <option value="<?=$value->id?>"><?=$value->category_name?></option>
-                                    <?php endforeach;?>
-                                </select>
+
+                                    <input list="categories">
+                                    <datalist id="categories">
+                                        <?php foreach ($data['categories'] as $key=>$value):?>
+                                            <option value="<?=$value->category_name?>"></option>
+                                        <?php endforeach;?>
+                                    </datalist>
                                 <?php endif;?>
                             </div>
                         </div>
@@ -73,11 +75,8 @@
                                 <input type="file" name="product_image[]" id="upload-product" multiple>
                             </div>
                         </div>
-<<<<<<< HEAD
-                        <button class="btn btn-primary">Thêm mới sản phẩm</button>
-=======
                         <button class="btn btn-primary" id="create-product">Thêm mới sản phẩm</button>
->>>>>>> bfe2c9e52cbdd6f124d8d16f01bf977037508204
+
                     </form>
                 </div>
             </div><!-- col-lg-12-->
